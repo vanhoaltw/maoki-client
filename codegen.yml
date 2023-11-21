@@ -1,0 +1,13 @@
+overwrite: true
+schema: http://localhost:3010/graphql
+documents: null
+generates:
+  ./types/graphql.ts:
+    config:
+      useIndexSignature: true
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+  ./fragmentTypes.json:
+    plugins:
+      - fragment-matcher
